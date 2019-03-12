@@ -1,0 +1,8 @@
+---
+title: "workout01-dan-zhao"
+author: "DanZhao"
+date: "2019/3/12"
+output: github_document
+---
+# Workout 01: GSW Shot Charts
+## 1) File Structure
