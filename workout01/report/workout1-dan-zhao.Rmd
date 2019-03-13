@@ -4,7 +4,6 @@ author: "DanZhao"
 date: "2019/3/12"
 output: github_document
 ---
-# Workout 01: GSW Shot Charts  
 
 ## 5) Report  
 

@@ -3,9 +3,6 @@ workout01-dan-zhao
 DanZhao
 2019/3/12
 
-Workout 01: GSW Shot Charts
-===========================
-
 5) Report
 ---------
 
