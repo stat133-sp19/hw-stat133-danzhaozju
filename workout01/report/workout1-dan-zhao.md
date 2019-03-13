@@ -86,7 +86,7 @@ shots_data %>%
 
 ### 5.2) Narrative: The Warriors can shoot!
 
-#### Motivation and Background
+#### 5.2.1) Motivation and Background
 
 The 2016-2017 season of Golden State Warriors was its 71st season in the NBA and also the 55th season in the San Francisco Bay Area. In this season, they created so many incredible miracles just as they did in the previous seasons.<sup>\[1\]</sup> The Warriors won their fifth NBA title by going 16-1, which set the best record in the NBA history.<sup>\[2\]\[3\]</sup> Besides, The Warriors were on their way to equaling their 67-15 record from 2014-2015 regular season by breaking more than 20 NBA records.
 
@@ -94,7 +94,7 @@ With the joining of free agent Kevin Durant in the offseason, the Warriors were 
 
 In the 2016-2017 regular season, it is reported that the league average get 111 points for every 100 shots, which means that 1.11 points is averagely achieved by a shot. 1.11 points per shot is also a good benchmark when assessing the value of a particular shot. The Warriors, a team stacked with incredible shooters, far exceeded that mark by getting averaging 1.21 points per shot. By analyzing the shooting statistics of the Golden State Warriors, perhaps we will be able to understand why the Warriors has repeatedly made history.
 
-#### Data and Analysis
+#### 5.2.2) Data and Analysis
 
 Our data includes the shooting data of the five Golden State Warriors players: Andre Iguodala, Draymond Green, Kevin Durant, Klay Thompson, Stephen Curry. The data frame "shots\_data" includes the details of every shot attempt by the five players, such as the time of the attempt in the game, whether the shot was made or missed, the action type, whether it was a 2-point field goal or a 3-point field goal, shot distance and the court coordinates where a shot occurred.
 
@@ -141,11 +141,11 @@ As can be seen from the 3PT effective shooting percentage by player, it is obvio
 
 As for the total effective shooting percentage by player, although he didn't make the most shots, Kevin Durant became the first by achieving a precentage of 0.541, which is incrediblly high. Andre Iguodala is shooter with the second highest success percentage. The third and fourth shooters are Klay Thompson and Stephen Curry. They made more than 1200 attempts including more than 500 made shots and achieve success percentages of 0.471 and 0.467.
 
-#### Discussion and Conclusion
+#### 5.2.3) Discussion and Conclusion
 
 The five players of the Golden State Warriors are all top shooters extremely high level across the world. Andre Iguodala is better at shooting two pointers. He didn't try that many time compared to the other four players. But he achieve the highest success percentage of 2-point shots. It might be because he was more cautious or it might be included in the strategy and plan of the whole team. Stephen Curry and Klay Thompson are the most important shooters who made the most shots and contributed the most points. Although they are also excellent in shooting 2-pointers, they are more dominant on three pointers. If there is a chance to shoot 3-pointers, they will be the most suitable players to do that. Kevin Durant achieve the highest effective shooting percentage and his abilities of 2-pointers and 3-pointers are balanced. Draymond Green became the last player in both 2-pointers and 3-pointers.
 
-#### References
+#### 5.2.4) References
 
 1.  "Purdy: Put a pause on the dynasty talk–and just enjoy this Warriors title". Mercury News. Retrieved June 12, 2017.
 2.  "Kevin Durant makes the Warriors the villain the NBA needs". Fox Sports. July 4, 2016.
