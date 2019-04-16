@@ -60,7 +60,7 @@ ui <- fluidPage(
    plotOutput("timelines"),
    
    h4("Balances"),
-   tableOutput("balances")
+   verbatimTextOutput("balances")
 )
 
 # Define server logic required to draw a histogram
@@ -151,11 +151,12 @@ server <- function(input, output) {
          labs(title="Three modes of investing")+
          scale_colour_brewer(palette = "Set1", name = "variable")+
          geom_area(alpha=0.3)+
-         scale_fill_brewer(palette = "Set1", name = "variable")
+         scale_fill_brewer(palette = "Set1", name = "variable")+
+         theme_bw()
      }
    })
    
-   output$balances <- renderTable({
+   output$balances <- renderPrint({
      modalities()
    })
 }
