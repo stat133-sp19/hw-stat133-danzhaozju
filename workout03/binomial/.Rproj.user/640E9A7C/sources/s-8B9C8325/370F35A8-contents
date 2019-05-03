@@ -34,9 +34,9 @@ Install the development version from GitHub via the package `"devtools"`:
 devtools::install_github("stat133-sp19/hw-stat133-danzhaozju/workout03/binomial")
 #> Downloading GitHub repo stat133-sp19/hw-stat133-danzhaozju@master
 #>   
-   checking for file ‘/private/var/folders/tj/5ncv4ctn0q9dmg7tmg14hzn00000gn/T/RtmpRnrHK7/remotes38013a37e6d9/stat133-sp19-hw-stat133-danzhaozju-c8f1f88/workout03/binomial/DESCRIPTION’ ...
+   checking for file ‘/private/var/folders/tj/5ncv4ctn0q9dmg7tmg14hzn00000gn/T/Rtmp4hRzOb/remotes3d476c9ba2f4/stat133-sp19-hw-stat133-danzhaozju-3343a9e/workout03/binomial/DESCRIPTION’ ...
   
-✔  checking for file ‘/private/var/folders/tj/5ncv4ctn0q9dmg7tmg14hzn00000gn/T/RtmpRnrHK7/remotes38013a37e6d9/stat133-sp19-hw-stat133-danzhaozju-c8f1f88/workout03/binomial/DESCRIPTION’
+✔  checking for file ‘/private/var/folders/tj/5ncv4ctn0q9dmg7tmg14hzn00000gn/T/Rtmp4hRzOb/remotes3d476c9ba2f4/stat133-sp19-hw-stat133-danzhaozju-3343a9e/workout03/binomial/DESCRIPTION’
 #> 
   
 ─  preparing ‘binomial’:
@@ -60,7 +60,7 @@ devtools::install_github("stat133-sp19/hw-stat133-danzhaozju/workout03/binomial"
 #> 
 # install "cointoss" (with vignettes)
 devtools::install_github("stat133-sp19/hw-stat133-danzhaozju/workout03/binomial", build_vignettes = TRUE)
-#> Skipping install of 'binomial' from a github remote, the SHA1 (c8f1f886) has not changed since last install.
+#> Skipping install of 'binomial' from a github remote, the SHA1 (3343a9e2) has not changed since last install.
 #>   Use `force = TRUE` to force installation
 ```
 
