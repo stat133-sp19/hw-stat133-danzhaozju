@@ -42,9 +42,9 @@ Install the development version from GitHub via the package `"devtools"`:
 # development version from GitHub:
 #install.packages("devtools") 
 # install "cointoss" (without vignettes)
-devtools::install_github("stat133-sp19/hw-stat133-danzhaozju/workout3/binomial")
+devtools::install_github("stat133-sp19/hw-stat133-danzhaozju/workout03/binomial")
 # install "cointoss" (with vignettes)
-devtools::install_github("stat133-sp19/hw-stat133-danzhaozju/workout3/binomial", build_vignettes = TRUE)
+devtools::install_github("stat133-sp19/hw-stat133-danzhaozju/workout03/binomial", build_vignettes = TRUE)
 ```  
 
 ## Usage
