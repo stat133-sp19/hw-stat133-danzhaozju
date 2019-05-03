@@ -1,0 +1,18 @@
+Package: binomial
+Type: Package
+Title: Functions of Binomial Distribution
+Version: 0.1.0
+Author: Dan Zhao
+Maintainer: Dan Zhao <dan_zhao@berkeley.edu>
+Description: Implements functions for calculating probabilities of a 
+    Binomial random variable, and related calculations such as the 
+    probability distribution, the expected value, variance, etc.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr

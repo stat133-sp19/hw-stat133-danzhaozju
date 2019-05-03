@@ -1,0 +1,13 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+Overview
+--------
+
+`"binomial"` is a package that provides functions for calculating probabilities of a Binomial random variable, and related calculations such as the probability distribution, the expected value, variance, etc.
+
+-   The function bin\_choose() calculates the number of combinations in which k successes can occur in n trials.
+-   The function bin\_probability() can calculate probabilities of getting certain successes in certain trials.
+-   The function bin\_distribution() returns a data frame with the probability distribution: sucesses in the first column, probability in the second column.
+-   The function bin\_cumulative() calculates both the probability distribution and the cumulative probabilities
+-   The function bin\_variable() creates an object of class “binvar”
+-   The functions bin\_mean(), bin\_variance(), bin\_mode(), bin\_skewness(), bin\_kurtosis() calculate the summary measures.

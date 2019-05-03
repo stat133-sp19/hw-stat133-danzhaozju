@@ -1,0 +1,138 @@
+---
+title: "Introduction to Package binomial"
+author: "Dan Zhao"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to binomial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(collapse = T, comment = "#>")
+library(binomial)
+```
+
+## Binomial Distribution
+The package `"binomial"` is an R package that implements functions for calculating probabilities of a Binomial random variable, and related calculations such as the probability distribution, the expected value, variance, etc.
+
+## Calculate the number of combinations using function `bin_choose()`
+The function `bin_choose()` calculates the number of combinations in which k successes can occur in n trials.  
+
+* The function `bin_choose()` should have arguments `n` and `k`.  
+* If k > n, then `bin_choose()` should `stop()` execution returning an error message like "k cannot be greater than n"  
+
+```{r}
+bin_choose(n = 5, k = 2)
+bin_choose(5, 0)
+bin_choose(5, 1:3)
+```  
+
+## Calculate probabilities using function `bin_probability()`
+The function `bin_probability()` can calculate probabilities of getting certain successes in certain trials.  
+
+* `bin_probability()` takes three arguments: `success`, `trials`, and `prob`.  
+* If any of `trials`, `prob` or `success` is invalid, then `bin_probability()` should raise an error—triggered by `stop()`—e.g. something like 'invalid trials value' or 'invalid success value'.  
+
+```{r}
+# probability of getting 2 successes in 5 trials
+# (assuming prob of success = 0.5)
+bin_probability(success = 2, trials = 5, prob = 0.5)
+
+# probabilities of getting 2 or less successes in 5 trials
+# (assuming prob of success = 0.5)
+bin_probability(success = 0:2, trials = 5, prob = 0.5)
+
+# 55 heads in 100 tosses of a loaded coin with 45% chance of heads
+bin_probability(success = 55, trials = 100, prob = 0.45)
+```
+
+## Calculate probability distribution using function `bin_distribution()`
+The function `bin_distribution()` returns a data frame with the probability distribution: sucesses in the first column, probability in the second column.
+
+* `bin_distribution()` takes two arguments `trials`, and `prob`.  
+* `bin_distribution()` retruns a data.frame with two classes: c("bindis", "data.frame"). In other words, the primary class is "bindis" indicating that this is an object of class
+binomial distribution. Additionally, to keep this object as a data frame, we still need to include a class "data.frame".
+
+```{r}
+# binomial probability distribution
+bin_distribution(trials = 5, prob = 0.5)
+```  
+
+Plotting method `plot.bindis()` can be used to graph a barplot to display the probability histogram of a binomial distribution object "bindis".
+
+```{r}
+# plotting binomial probability distribution
+dis1 <- bin_distribution(trials = 5, prob = 0.5)
+plot(dis1)
+```
+
+## Calculate both the probability distribution and the cumulative probabilities using function `bin_cumulative()`
+
+* `bin_cumulative()` takes two arguments `trials`, and `prob`.
+* `bin_cumulative()` returns a data.frame with two classes: c("bincum","data.frame"). 
+* `bin_cumulative()` returns a data frame with both the probability distribution and the cumulative probabilities: sucesses in the first column, probability in the second column, and cumulative in the third column.
+
+```{r}
+# binomial cumulative distribution
+bin_cumulative(trials = 5, prob = 0.5)
+```  
+
+Plotting method `plot.bincum()` can be used to graph the cumulative distribution in an object "bincum".
+
+```{r}
+# plotting binomial cumulative distribution
+dis2 <- bin_cumulative(trials = 5, prob = 0.5)
+plot(dis2)
+```  
+
+## Create an object of class "binvar" using `bin_variable()`
+* The function `bin_variable()` takes two arguments: `trials` and `prob`
+* The function `bin_variable()` returns an object of class "binvar", that is, a binomial random variable object.
+* The returned object should be a list with named elements:  
+  – trials: number of trials  
+– prob: probability of success  
+
+```{r}
+var1 = bin_variable(5,0.5)
+```
+
+The method function `print.binvar()` is able to nicely print the content of an object "binvar".
+
+```{r}
+bin1 <- bin_variable(trials = 10, p = 0.3)
+bin1
+```
+
+The print method `summary.binvar()` is able to nicely print the contents of an object "binvar".  
+
+* It takes an object of class "binvar".  
+* The returned output is a list of class "summary.binvar" containing named elements:  
+  – trials: number of trials  
+– prob: probability of success  
+– mean: mean or expected value  
+– variance: variance  
+– mode: mode  
+– skewness: skewness  
+– kurtosis: kurtosis  
+
+```{r}
+bin1 <- bin_variable(trials = 10, p = 0.3)
+binsum1 <- summary(bin1)
+binsum1
+```  
+
+## Calculate the functions of the summary measures
+
+* The functions `bin_mean()`, `bin_variance()`, `bin_mode()`, `bin_skewness()`, `bin_kurtosis()` take two arguments: trials and prob and return the summary measures.
+
+```{r}
+bin_mean(10, 0.3)
+bin_variance(10, 0.3)
+bin_mode(10, 0.3)
+bin_skewness(10, 0.3)
+bin_kurtosis(10, 0.3)
+```
+
+
